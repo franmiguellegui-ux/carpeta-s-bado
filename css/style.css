@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --primary-color: rgb(115, 182, 230);
+    --secondary-color: rgb(0, 60, 102);
+    --bg-light: rgb(230, 228, 233);}
+body{
+    font-family:"inter", 'Montserrat';
+}
+header{
+    background-color: var(--primary-color);
+    color: var(--bg-light);
+    padding: 20px;
+    text-align: center;
+}
+main{
+    background-color: var(--bg-light);
+    background-repeat: no-repeat;
+    height: 55vh;
+    color: var(--secondary-color);
+    padding: 20px;
+}
+footer{
+    background-color: var(--secondary-color);
+    color: var(--bg-light);
+    padding: 20px;
+    text-align: center;
+}
