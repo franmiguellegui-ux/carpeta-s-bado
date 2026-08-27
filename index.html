@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inicio</title>
-    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
-        <h1>Mates-B</h1>
-        <figure>
-            <figcaption>
-                <img src="../assets/imag/Logo.png" alt="Logo de Mates-B" width="100" height="100">
-            </figcaption>
-        </figure>
         <nav>
+            <img src="./assets/imag/Logo.png" alt="Logo de Mates-B">
             <ul>
                 <li><a href="./pages/mates.html">mates</a></li>
                 <li><a href="./pages/accesorios.html">accesorios</a></li>
@@ -25,54 +25,64 @@
     </header>
     
     <main>
-        <h2>Bienvenido a Mates-B</h2>
-        <h3>Una tienda que garantiza un producto:</h3>
+        <section class="presentación">
+            <h1>Bienvenido a Mates-B</h1>
+            <p>Descubre la diferencia que hacen nuestros mates de alta calidad.</p>
+        </section>
 
-        <h4>¿Que hace unicos a nuestros productos?</h4>
-        <ul>
-            <li>
-                <h5>Son buenos</h5>
+        <figure class="imagen-destacada">
+            <img src="./assets/imag/camionerodealgarrobo.png" alt="Camionero de algarrobo">
+            <figcaption>Camionero de algarrobo</figcaption>
+        </figure>
+
+        <section class="caracteristicas">
+            <h2>¿Que hace unicos a nuestros productos?</h2>
+
+            <div class="caracteristicas-contenedor">
+                <article class="caracteristica calidad">
+                <h3>Son buenos</h3>
                 <p>Ofrecemos mates de alta calidad que te brindarán una experiencia única.</p>
-            </li>
+                </article>
 
-            <li>
-                <h5>Son bonitos</h5>
+                <article class="caracteristica diseño">
+                <h3>Son bonitos</h3>
                 <p>Nuestros mates están diseñados con un estilo único que complementa cualquier espacio.</p>
-            </li>
+                </article>
 
-            <li>
-                <h5>Son baratos</h5>
+                <article class="caracteristica precio">
+                <h3>Son baratos</h3>
                 <p>Ofrecemos precios competitivos sin comprometer la calidad de nuestros productos.</p>
-            </li>
-        </ul>
+                </article>
+            </div>
+        </section>
 
-        <h4>¿Que ofrecemos?</h4>
-        <ul>
-            <li>
-                <h5>Envios a todo el país</h5>
-            </li>
-            <li>
-                <h5>Pago en efectivo o transferencia</h5>
-            </li>
-            <li>
-                <h5>Devoluciones y reembolsos</h5>
-            </li>
-        </ul>
+        <section class="beneficios">
+            <h2>¿Que ofrecemos?</h2>
+
+            <div class="beneficios-contenedor">
+                    <article class="beneficio envios">
+                    <h3>Envios a todo el país</h3>
+                    <p>El mate llegara a tu domicilio en tiempo y forma.</p>
+                    </article>
+                
+                    <article class="beneficio pagos">
+                    <h3>Pago en efectivo o transferencia</h3>
+                    <p>Ofrecemos diversas opciones de pago para tu conveniencia.</p>
+                    </article>
+                
+                    <article class="beneficio devoluciones">
+                    <h3>Devoluciones y reembolsos</h3>
+                    <p>Si no estas conforme con tu compra, ofrecemos devoluciones y reembolsos.</p>
+                    </article>
+            </div>
+        </section>
     </main>
 
     <footer>
         <ul>
-            <li>
-                <a href="https://www.instagram.com/mates_bx3/">Instagram</a>
-            </li>
-            <li>
-                <a href="https://www.tiktok.com/@mate_b8">TikTok</a>
-            </li>
-            <li>
-                <a href="https://www.facebook.com/profile.php?id=61590901647775">Facebook</a>
-            </li>
+            <li><a href="https://www.instagram.com/mates_bx3/">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@mate_b8">TikTok</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61590901647775">Facebook</a></li>
         </ul>
         <p>&copy; 2026 Mates-B. Todos los derechos reservados.</p>
     </footer>
-</body>
-</html>
