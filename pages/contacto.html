@@ -9,19 +9,58 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <nav>
-        <img src="../assets/imag/Logo.png" alt="Logo de Mates-B" width="100" height="100">
-            <ul>
-                <li><a href="../index.html">inicio</a></li>
-                <li><a href="mates.html">mates</a></li>
-                <li><a href="accesorios.html">accesorios</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
-        </nav>
+        <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/imag/Logo.png" alt="Logo de Mates-B">
+            </a>
+
+            <button 
+                class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav" 
+                aria-expanded="false" 
+                aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="mates.html">Mates</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="accesorios.html">Accesorios</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
     </header>
 
     <main>
@@ -32,7 +71,9 @@
             <p>Si tienes alguna pregunta o necesitas más información, no dudes en contactarnos.</p>
             <article>
                 <h3>Email</h3>
-                <p>mateb@example.com</p>
+            <a href="mailto:mateb@example.com" class="contacto-email">
+                 mateb@example.com
+            </a>
             </article>
         </section>
     </main>
@@ -45,5 +86,7 @@
         </ul>
         <p>&copy; 2026 Mates-B. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

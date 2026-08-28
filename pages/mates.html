@@ -9,19 +9,58 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <nav>
-        <img src="../assets/imag/Logo.png" alt="Logo de Mates-B">
-            <ul>
-                <li><a href="../index.html">inicio</a></li>
-                <li><a href="accesorios.html">accesorios</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contacto.html">contacto</a></li>
-            </ul>
-        </nav>
+        <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/imag/Logo.png" alt="Logo de Mates-B">
+            </a>
+
+            <button 
+                class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav" 
+                aria-expanded="false" 
+                aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="mates.html">Mates</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="accesorios.html">Accesorios</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
     </header>
 
     <main>
@@ -30,69 +69,118 @@
         <section class="mates-de-algarrobo">
             <h2>Mates de algarrobo</h2>
 
-            <article class="mate camionero">
-            <h3>Camionero de algarrobo</h3>
-            <figure>
-                    <img src="../assets/imag/camionerodealgarrobo.png" alt="Camionero de algarrobo">
-                <figcaption>camionero de algarrobo</figcaption>
-            </figure>
-            </article>
+            <article class="card mate camionero">
+        <figure>
+            <img 
+                src="../assets/imag/camionerodealgarrobo.png" 
+                class="card-img-top" 
+                alt="Camionero de algarrobo">
+        </figure>
 
-            <article class="mate imperial">
-            <h3>Imperial de algarrobo</h3>
-            <figure>
-                    <img src="../assets/imag/imperialdealgarrobo.png" alt="Imperial de algarrobo">
-                <figcaption>imperial de algarrobo</figcaption>
-            </figure>
-            </article>
+        <div class="card-body">
+            <h3 class="card-title">Camionero de algarrobo</h3>
+            <p class="card-text">Mate de algarrobo de estilo clásico y resistente.</p>
+            <a href="#" class="btn btn-mates">Ver producto</a>
+        </div>
+    </article>
 
-            <article class="mate torpedo">
-            <h3>Torpedo de algarrobo</h3>
-            <figure>
-                    <img src="../assets/imag/torpedodealgarrobo.png" alt="Torpedo de algarrobo">
-                <figcaption>torpedo de algarrobo</figcaption>
-            </figure>
-            </article>
+    <article class="card mate imperial">
+        <figure>
+            <img 
+                src="../assets/imag/imperialdealgarrobo.png" 
+                class="card-img-top" 
+                alt="Imperial de algarrobo">
+        </figure>
+
+        <div class="card-body">
+            <h3 class="card-title">Imperial de algarrobo</h3>
+            <p class="card-text">Mate de diseño tradicional y elegante.</p>
+            <a href="#" class="btn btn-mates">Ver producto</a>
+        </div>
+    </article>
+
+    <article class="card mate torpedo">
+        <figure>
+            <img 
+                src="../assets/imag/torpedodealgarrobo.png" 
+                class="card-img-top" 
+                alt="Torpedo de algarrobo">
+        </figure>
+
+        <div class="card-body">
+            <h3 class="card-title">Torpedo de algarrobo</h3>
+            <p class="card-text">Una alternativa diferente para disfrutar el mate.</p>
+            <a href="#" class="btn btn-mates">Ver producto</a>
+        </div>
+    </article>
         </section>
 
         <section class="mates-de-calabaza">
             <h2>Mates de calabaza</h2>
 
-            <article class="mate camionero">
-            <h3>Camionero de calabaza</h3>
-            <figure>
-                    <img src="../assets/imag/camionerodecalabaza.png" alt="Camionero de calabaza">
-                <figcaption>camionero de calabaza</figcaption>
-            </figure>
-            </article>
+            <article class="card mate camionero">
+        <figure>
+            <img 
+                src="../assets/imag/camionerodecalabaza.png" 
+                class="card-img-top" 
+                alt="Camionero de calabaza">
+        </figure>
 
-            <article class="mate imperial">
-            <h3>Imperial de calabaza</h3>
-            <figure>
-                    <img src="../assets/imag/imperialdecalabaza.png" alt="Imperial de calabaza">
-                <figcaption>imperial de calabaza</figcaption>
-            </figure>
-            </article>
+        <div class="card-body">
+            <h3 class="card-title">Camionero de calabaza</h3>
+            <p class="card-text">Mate tradicional de calabaza.</p>
+            <a href="#" class="btn btn-mates">Ver producto</a>
+        </div>
+    </article>
 
-            <article class="mate torpedo">
-            <h3>Torpedo de calabaza</h3>
-            <figure>
-                    <img src="../assets/imag/torpedodecalabaza.png" alt="Torpedo de calabaza">
-                <figcaption>torpedo de calabaza</figcaption>
-            </figure>
-            </article>
+    <article class="card mate imperial">
+        <figure>
+            <img 
+                src="../assets/imag/imperialdecalabaza.png" 
+                class="card-img-top" 
+                alt="Imperial de calabaza">
+        </figure>
+
+        <div class="card-body">
+            <h3 class="card-title">Imperial de calabaza</h3>
+            <p class="card-text">Diseño clásico para una experiencia tradicional.</p>
+            <a href="#" class="btn btn-mates">Ver producto</a>
+        </div>
+    </article>
+
+    <article class="card mate torpedo">
+        <figure>
+            <img 
+                src="../assets/imag/torpedodecalabaza.png" 
+                class="card-img-top" 
+                alt="Torpedo de calabaza">
+        </figure>
+
+        <div class="card-body">
+            <h3 class="card-title">Torpedo de calabaza</h3>
+            <p class="card-text">Una forma diferente de disfrutar el mate.</p>
+            <a href="#" class="btn btn-mates">Ver producto</a>
+        </div>
+    </article>
         </section>
 
         <section class="mates-de-acero">
             <h2>Mates de acero</h2>
 
-            <article class="mate imperial">
-            <h3>Imperial de acero</h3>
-            <figure>
-                <img src="../assets/imag/imperialdecalabaza.png" alt="Imperial de acero">
-                <figcaption>imperial de acero</figcaption>
-            </figure>
-            </article>
+            <article class="card mate imperial">
+        <figure>
+            <img 
+                src="../assets/imag/imperialdecalabaza.png" 
+                class="card-img-top" 
+                alt="Imperial de acero">
+        </figure>
+
+        <div class="card-body">
+            <h3 class="card-title">Imperial de acero</h3>
+            <p class="card-text">Mate resistente y práctico para el uso diario.</p>
+            <a href="#" class="btn btn-mates">Ver producto</a>
+        </div>
+    </article>
         </section>
     </main>
 
@@ -104,5 +192,7 @@
         </ul>
         <p>&copy; 2026 Mates-B. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

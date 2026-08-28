@@ -9,18 +9,50 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
-        <nav>
-            <img src="./assets/imag/Logo.png" alt="Logo de Mates-B">
-            <ul>
-                <li><a href="./pages/mates.html">mates</a></li>
-                <li><a href="./pages/accesorios.html">accesorios</a></li>
-                <li><a href="./pages/faq.html">FAQ</a></li>
-                <li><a href="./pages/contacto.html">contacto</a></li>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./assets/imag/Logo.png" alt="Logo de Mates-B">
+                </a>
+
+                <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/mates.html">Mates</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/accesorios.html">Acesorios</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/faq.html">FAQ</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                </li>
             </ul>
+        </div>
+            </div>
         </nav>
     </header>
     
@@ -30,10 +62,89 @@
             <p>Descubre la diferencia que hacen nuestros mates de alta calidad.</p>
         </section>
 
-        <figure class="imagen-destacada">
-            <img src="./assets/imag/camionerodealgarrobo.png" alt="Camionero de algarrobo">
-            <figcaption>Camionero de algarrobo</figcaption>
-        </figure>
+        <section class="galeria">
+    <div id="carouselMates" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+            <button type="button" 
+                    data-bs-target="#carouselMates" 
+                    data-bs-slide-to="0" 
+                    class="active" 
+                    aria-current="true" 
+                    aria-label="Camionero de algarrobo">
+            </button>
+
+            <button type="button" 
+                    data-bs-target="#carouselMates" 
+                    data-bs-slide-to="1" 
+                    aria-label="Imperial de algarrobo">
+            </button>
+
+            <button type="button" 
+                    data-bs-target="#carouselMates" 
+                    data-bs-slide-to="2" 
+                    aria-label="Torpedo de algarrobo">
+            </button>
+        </div>
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <img 
+                    src="./assets/imag/camionerodealgarrobo.png" 
+                    class="d-block w-100" 
+                    alt="Camionero de algarrobo">
+
+                <div class="carousel-caption">
+                    <h3>Camionero de algarrobo</h3>
+                    <p>Un mate clásico y resistente.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img 
+                    src="./assets/imag/imperialdealgarrobo.png" 
+                    class="d-block w-100" 
+                    alt="Imperial de algarrobo">
+
+                <div class="carousel-caption">
+                    <h3>Imperial de algarrobo</h3>
+                    <p>Diseño tradicional y elegante.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img 
+                    src="./assets/imag/torpedodealgarrobo.png" 
+                    class="d-block w-100" 
+                    alt="Torpedo de algarrobo">
+
+                <div class="carousel-caption">
+                    <h3>Torpedo de algarrobo</h3>
+                    <p>Una opción diferente para disfrutar el mate.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" 
+                type="button" 
+                data-bs-target="#carouselMates" 
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+
+        <button class="carousel-control-next" 
+                type="button" 
+                data-bs-target="#carouselMates" 
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+
+    </div>
+</section>
 
         <section class="caracteristicas">
             <h2>¿Que hace unicos a nuestros productos?</h2>
@@ -86,3 +197,5 @@
         </ul>
         <p>&copy; 2026 Mates-B. Todos los derechos reservados.</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
