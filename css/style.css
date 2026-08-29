@@ -123,9 +123,16 @@ header{
 main{
     background-color: var(--bg-light);
     padding: 20px;
+    min-height: 70vh;
 }
 main section{
     margin-bottom: 50px;
+}
+
+/* TITULOS PRINCIPALES */
+main > h1{
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 /* PRESENTACÍON */
@@ -197,20 +204,58 @@ main section{
     background-color: var(--accent-color);
 }
 
+
+/* CARACTERISTICAS DEL INDEX */
+.caracteristicas{
+    padding: 30px 0;
+}
+.caracteristicas > h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.caracteristica{
+    background-color: var(--bg-white);
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.caracteristica:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+.caracteristica h3{
+    margin-bottom: 15px;
+}
+
+/* BENEFICIOS DEL INDEX */
+.beneficios {
+    padding: 30px 0;
+}
+
+.beneficios > h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.beneficio {
+    background-color: var(--bg-white);
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.beneficio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.beneficio h3 {
+    margin-bottom: 15px;
+}
+
 /* CATALOGO DE MATES */
-.mates-de-algarrobo,
-.mates-de-calabaza,
-.mates-de-acero{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 25px;
-    padding: 30px;
-}
-.mates-de-algarrobo h2,
-.mates-de-calabaza h2,
-.mates-de-acero h2{
-    margin-bottom: 10px;
-}
 .mates-de-algarrobo article,
 .mates-de-calabaza article,
 .mates-de-acero article{
@@ -224,19 +269,21 @@ main section{
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
-.mates-de-algarrobo figure,
-.mates-de-calabaza figure,
-.mates-de-acero figure{
-    text-align: center;
+
+/* IMÁGENES DE LAS CARDS */
+.mates-de-algarrobo article figure,
+.mates-de-calabaza article figure,
+.mates-de-acero article figure {
     margin: 0;
+    background-color: var(--bg-white);
 }
-.mates-de-algarrobo img,
-.mates-de-calabaza img,
-.mates-de-acero img{
+
+.mates-de-algarrobo article img,
+.mates-de-calabaza article img,
+.mates-de-acero article img {
     width: 100%;
-    max-width: 250px;
-    height: auto;
-    margin: 0 auto;
+    height: 300px;
+    object-fit: contain;
 }
 
 /* CARDS DE MATES */
@@ -292,36 +339,37 @@ main section{
 /* CATÁLOGO DE ACCESORIOS */
 .accesorios{
     padding: 30px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
 }
 .accesorios h2{
-    grid-column: 1 / -1;
     margin-bottom: 25px;
 }
-.accesorios article{
+.accesorio-card{
     background-color: var(--bg-white);
     padding: 20px;
+    height: 100%;
+    border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.accesorios article:hover{
+.accesorio-card:hover{
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
-.accesorios figure{
-    text-align: center;
+.accesorio-card:focus-within{
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
 }
-.accesorios img{
+.accesorio-card:active{
+    transform: translateY(-2px);
+}
+.accesorio-card figure{
+    text-align: center;
+    margin: 0 0 20px;
+}
+.accesorio-card img{
     width: 100%;
     max-width: 250px;
-    height: auto;
-}
-
-/* ESTADOS INTERACTIVOS DE ACCESORIOS */
-.accesorios article:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    height: 250px;
+    object-fit: contain;
 }
 
 /* PREGUNTAS FRECUENTES */
@@ -334,7 +382,8 @@ main section{
 .preguntas-frecuentes article{
     background-color: var(--bg-white);
     padding: 25px;
-    margin-bottom: 20px;
+    height: 100%;
+    border-radius: 8px;
 }
 .preguntas-frecuentes article h3{
     margin-bottom: 10px;
@@ -362,20 +411,19 @@ main section{
 
 /* CONTACTO */
 .contacto{
-    max-width: 800px;
-    margin: 0 auto;
     padding: 30px;
 }
 .contacto h2{
     margin-bottom: 15px;
 }
-.contacto > p{
+.contacto p{
     margin-bottom: 30px;
     line-height: 1.6;
 }
 .contacto article{
     background-color: var(--bg-white);
     padding: 25px;
+    border-radius: 8px;
 }
 .contacto article h3{
     margin-bottom: 10px;
@@ -407,6 +455,7 @@ footer ul{
     gap: 30px;
     list-style: none;
     margin-bottom: 20px;
+    padding: 0;
 }
 footer ul li a{
     color: var(--bg-light);
@@ -430,101 +479,154 @@ footer p{
     text-align: center;
     font-size: 0.9rem;
 }
+/* MOBILE */
+@media (max-width: 767px) {
 
-/* GRID TABLET */
-@media (min-width: 768px){
-    .mates-de-algarrobo,
-    .mates-de-calabaza{
-        grid-template-columns: repeat(2, 1fr);
+    main {
+        padding: 15px;
     }
 
- .mates-de-acero{
-    grid-template-columns: 1fr;
- }
+    main > h1 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.15rem;
+    }
+
+    .navbar-brand img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .navbar-nav {
+        gap: 5px;
+        padding: 10px 0;
+    }
+
+    .navbar .nav-link {
+        padding: 8px 0;
+    }
+
+    .presentación {
+        padding: 60px 20px;
+    }
+
+    .presentación h1 {
+        font-size: 2rem;
+    }
+
+    .presentación p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .galeria {
+        padding: 10px 0;
+    }
+
+    .galeria .carousel-item img {
+        height: 280px;
+    }
+
+    .galeria .carousel-caption {
+        position: static;
+        background-color: var(--secondary-color);
+        padding: 12px;
+    }
+
+    .galeria .carousel-caption h3 {
+        font-size: 1rem;
+    }
+
+    .galeria .carousel-caption p {
+        font-size: 0.85rem;
+    }
+
+    .caracteristicas,
+    .beneficios {
+        padding: 20px 0;
+    }
+
+    .caracteristica,
+    .beneficio {
+        padding: 20px;
+    }
+
+    .mates-de-algarrobo,
+    .mates-de-calabaza,
+    .mates-de-acero {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .mates-de-algarrobo article img,
+    .mates-de-calabaza article img,
+    .mates-de-acero article img {
+        height: 250px;
+    }
+
+    .accesorios {
+        padding: 15px 10px;
+    }
+
+    .accesorio-card {
+        padding: 15px;
+    }
+
+    .accesorio-card img {
+        height: 220px;
+    }
+
+    .preguntas-frecuentes,
+    .contacto {
+        padding: 15px 5px;
+    }
+
+    .preguntas-frecuentes article,
+    .contacto article {
+        padding: 20px;
+    }
+
+    footer {
+        padding: 25px 15px;
+    }
+
+    footer ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
 }
 
-/* GRID DESKTOP */
-@media (min-width: 1024px){
 
-    /* NAVBAR DESKTOP */
+/* TABLET */
+@media (min-width: 768px){
+    main{
+        padding: 30px;
+    }
+    .presentación{
+        padding: 80px 30px;
+    }
+    .galeria .carousel-item img{
+        height: 350px;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 992px){
     main{
         padding: 40px;
     }
-
     .presentación{
         padding: 100px 40px;
     }
-
-    /* INDEX */
-    .caracteristicas-contenedor{
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "calidad diseño precio";
-    }
-
-    .calidad{
-        grid-area: calidad;
-    }
-
-    .diseño{
-        grid-area: diseño;
-    }
-
-    .precio{
-        grid-area: precio;
-    }
-
-    .beneficios-contenedor{
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "envios pagos devoluciones";
-    }
-
-    .envios{
-        grid-area: envios;
-    }
-
-    .pagos{
-        grid-area: pagos;
-    }
-
-    .devoluciones{
-        grid-area: devoluciones;
-    }
-
-    /* MATES */
-    .mates-de-algarrobo{
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "titulo titulo titulo" "camionero imperial torpedo";
-    }
-
-    .mates-de-calabaza{
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "titulo titulo titulo" "camionero imperial torpedo";
-    }
-
-    .mates-de-acero{
-        grid-template-columns: 1fr;
-        grid-template-areas: "titulo" "imperial";
-    }
-
-    .mates-de-algarrobo h2,
-    .mates-de-calabaza h2,
-    .mates-de-acero h2{
-        grid-area: titulo;
-    }
-
-    .mates-de-algarrobo .camionero,
-    .mates-de-calabaza .camionero{
-        grid-area: camionero;
-    }
-
-    .mates-de-algarrobo .imperial,
-    .mates-de-calabaza .imperial,
-    .mates-de-acero .imperial{
-        grid-area: imperial;
-    }
-
-    .mates-de-algarrobo .torpedo,
-    .mates-de-calabaza .torpedo{
-        grid-area: torpedo;
+    .galeria .carousel-item img{
+        height: 400px;
     }
 }
